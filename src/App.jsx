@@ -11,6 +11,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import PageNotFound from "./pages/PageNotFound";
+import ChatApp from "./components/ChatApp";
 
 export default function App() {
   return (
@@ -34,6 +35,7 @@ export default function App() {
           <Route path="/profile" element={<PageNotFound />} />
           <Route path="/analytics" element={<PageNotFound />} />
           <Route path="/reports" element={<PageNotFound />} />
+          <Route path="/pages" element={<ChatApp />} />
         </Routes>
       </div>
     </Router>

@@ -1,10 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import ChatApp from "../components/ChatApp"; // Import the ChatApp
+
 const Dashboard = () => {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar/>
+      <Navbar />
 
       <div className="flex flex-1">
         {/* Sidebar */}
@@ -27,16 +29,15 @@ const Dashboard = () => {
         <main className="flex-1 p-4">
           <h1 className="text-2xl font-bold mb-4">Welcome to Your Dashboard</h1>
           <div className="grid grid-cols-2 gap-4">
-            {/* Placeholder for Graph */}
+            {/* Analytics Graph */}
             <div className="bg-white p-4 rounded shadow">
               <h2 className="font-bold mb-2">Analytics Graph</h2>
-              {/* You can use a library like Chart.js or Recharts here */}
               <div className="h-48 bg-gray-300 rounded">Graph Placeholder</div>
             </div>
-            {/* Placeholder for Table */}
+
+            {/* Data Table */}
             <div className="bg-white p-4 rounded shadow">
               <h2 className="font-bold mb-2">Data Table</h2>
-              {/* You can use a library like react-table here */}
               <table className="min-w-full">
                 <thead>
                   <tr>
@@ -56,6 +57,12 @@ const Dashboard = () => {
                 </tbody>
               </table>
             </div>
+          </div>
+
+          {/* LLM Chat Component */}
+          <div className="mt-6">
+            <h2 className="text-xl font-bold mb-2">AI Chat Assistant</h2>
+            <ChatApp />
           </div>
         </main>
       </div>
